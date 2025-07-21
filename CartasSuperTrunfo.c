@@ -11,7 +11,10 @@ int main(){
     int Npontosturisticos;
 
     printf("População:\n");
-    scanf("%d", populacao);
+    scanf("%d", &populacao);
+
+    printf("Área:\n");
+    scanf("%f", &area);
     
 
 }
