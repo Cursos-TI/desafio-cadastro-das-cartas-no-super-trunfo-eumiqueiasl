@@ -42,7 +42,7 @@ int main(){
     printf("Cidade A2\n");
     printf("Populacao A2: %d\n", populacaoA2);
     printf("Area A2(km²): %.2f\n", areaA2);
-    printf("PIB A2: %f\n", pibA2);
+    printf("PIB A2: %.2f\n", pibA2);
     printf("Numero de pontos turisticos A2: %d\n", NpontosturisticosA2);
 
     return 0;
