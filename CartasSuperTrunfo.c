@@ -73,7 +73,7 @@ int main(){
     printf("Densidade populacional A1 (hab/km²):%.2f\n", densidadepopA1);
     printf("PIB per Capita A1:%.2f\n", pibpercaptaA1);
 
-    printf("Cidade A2\n");
+    printf("Carta2\n");
     printf("Estado: %s\n", estado2);
     printf("Código: %s%s \n", estado2, codigodacarta1);
     printf("Nome da cidade A2: %s\n", nomedacidadeA2);
