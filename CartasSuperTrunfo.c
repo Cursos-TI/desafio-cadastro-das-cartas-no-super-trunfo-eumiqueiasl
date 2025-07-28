@@ -65,24 +65,24 @@ int main(){
     printf("Carta 1\n");
     printf("Estado: %s\n", estado1);
     printf("Código: %s%s \n", estado1, codigodacarta1);
-    printf("Nome da cidade: %s\n", nomedacidadeA1);
-    printf("Populacao A1: %d\n", populacaoA1);
-    printf("Area A1(km²): %.2f\n", areaA1);
-    printf("PIB A1: %.2f\n", pibA1);
-    printf("Numero de pontos turisticos A1: %d\n", NpontosturisticosA1);
-    printf("Densidade populacional A1 (hab/km²):%.2f\n", densidadepopA1);
-    printf("PIB per Capita A1:%.2f\n", pibpercaptaA1);
+    printf("Nome da cidade: %s\n", nomedacidade1);
+    printf("Populacao A1: %d\n", populacao1);
+    printf("Area A1(km²): %.2f\n", area1);
+    printf("PIB A1: %.2f\n", pib1);
+    printf("Numero de pontos turisticos A1: %d\n", Npontosturisticos1);
+    printf("Densidade populacional A1 (hab/km²):%.2f\n", densidadepop1);
+    printf("PIB per Capita A1:%.2f\n", pibpercapta1);
 
     printf("Carta2\n");
     printf("Estado: %s\n", estado2);
     printf("Código: %s%s \n", estado2, codigodacarta1);
-    printf("Nome da cidade A2: %s\n", nomedacidadeA2);
-    printf("Populacao A2: %d\n", populacaoA2);
-    printf("Area A2(km²): %.2f\n", areaA2);
-    printf("PIB A2: %.2f\n", pibA2);
-    printf("Numero de pontos turisticos A2: %d\n", NpontosturisticosA2);
-    printf("Densidade populacional A2 (hab/km²):%.2f\n", densidadepopA2);
-    printf("PIB per Capita A2:%.2f\n", pibpercaptaA2);
+    printf("Nome da cidade: %s\n", nomedacidade2);
+    printf("Populacao: %d\n", populacao2);
+    printf("Area(km²): %.2f\n", area2);
+    printf("PIB: %.2f\n", pib2);
+    printf("Numero de pontos turisticos: %d\n", Npontosturisticos2);
+    printf("Densidade populacional(hab/km²):%.2f\n", densidadepop2);
+    printf("PIB per Capita:%.2f\n", pibpercapta2);
 
     return 0;
 }
