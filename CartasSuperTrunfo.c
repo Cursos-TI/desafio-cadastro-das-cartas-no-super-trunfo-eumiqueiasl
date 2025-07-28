@@ -1,64 +1,71 @@
 #include <stdio.h>
 
 int main(){
-    //Cidade A1
-    char estadoA1;
-    char nomedacidadeA1;
-    int populacaoA1;
-    float areaA1;
-    float pibA1;
-    int NpontosturisticosA1;
-    float densidadepopA1;
-    float pibpercaptaA1; 
+    //Carta 1
+    char estado1[30];
+    char codigodacarta1[10];
+    char nomedacidade1[50];
+    int populacao1;
+    float area1;
+    float pib1;
+    int Npontosturisticos1;
+    float densidadepop1;
+    float pibpercapta1; 
 
-    //Cidade A2
-    char estadoA2[3]; // Ex SP
-    char nomedacidadeA2[50];
-    int populacaoA2;
-    float areaA2;
-    float pibA2;
-    int NpontosturisticosA2;
-    float densidadepopA2;
-    float pibpercaptaA2;
+    //Carta 2
+    char estado2[3];
+    char codigodacarta2[10];
+    char nomedacidade2[50];
+    int populacao2;
+    float area2;
+    float pib2;
+    int Npontosturisticos2;
+    float densidadepop2;
+    float pibpercapta2;
 
-    printf("Cidade A1\n");
-    printf("Estado A1 (ex: SP):\n");
-    scanf("%s", &estadoA1);
-    printf("Nome da cidade A1:\n");
-    scanf("%s", &nomedacidadeA1);
-    printf("População A1:\n");
-    scanf("%d", &populacaoA1);
-    printf("Área A1(km²):\n");
-    scanf("%f", &areaA1);
-    printf("PIB A1:\n");
-    scanf("%f", &pibA1);
-    printf("Numero de pontos turisticos A1:\n");
-    scanf("%d", &NpontosturisticosA1);
+    printf("Insira os dados da primeira carta \n");
+    printf("Digite a letra do Estado (Entre A e H):\n");
+    scanf("%s", estado1);
+    printf("Codigo da carta (dois digitos): \n");
+    scanf("%s", codigodacarta1);
+    printf("Nome da cidade:\n");
+    scanf("%s", nomedacidade1);
+    printf("População:\n");
+    scanf("%d", &populacao1);
+    printf("Área(km²):\n");
+    scanf("%f", &area1);
+    printf("PIB:\n");
+    scanf("%f", &pib1);
+    printf("Numero de pontos turisticos:\n");
+    scanf("%d", &Npontosturisticos1);
 
-    printf("Cidade A2\n");
-     printf("Estado A2 (ex: SP):\n");
-    scanf("%s", &estadoA2);
-    printf("Nome da cidade A2:\n");
-    scanf("%s", &nomedacidadeA2);
-    printf("População A2:\n");
-    scanf("%d", &populacaoA2);
-    printf("Área A2(km²):\n");
-    scanf("%f", &areaA2);
-    printf("PIB A2:\n");
-    scanf("%f", &pibA2);
-    printf("Numero de pontos turisticos A2:\n");
-    scanf("%d", &NpontosturisticosA2);
+    densidadepop1 = (float)populacao1 / area1;
+    pibpercapta1 = pib1 / populacao1;
 
-    // Cálculos
-    densidadepopA1 = (float)populacaoA1 / areaA1;
-    pibpercaptaA1 = pibA1 / populacaoA1;
+    printf("Insira os dados da segunda carta\n");
+    printf("Digite a letra do Estado (Entre A e H):\n");
+    scanf("%s", estado2);
+    printf("Codigo da carta (dois digitos): \n");
+    scanf("%s", codigodacarta2);
+    printf("Nome da cidade:\n");
+    scanf("%s", nomedacidade2);
+    printf("População:\n");
+    scanf("%d", &populacao2);
+    printf("Área(km²):\n");
+    scanf("%f", &area2);
+    printf("PIB:\n");
+    scanf("%f", &pib2);
+    printf("Numero de pontos turisticos:\n");
+    scanf("%d", &Npontosturisticos2);
 
-    densidadepopA2 = (float)populacaoA2 / areaA2;
-    pibpercaptaA2 = pibA2 / populacaoA2;
+    densidadepop2 = (float)populacao2 / area2;
+    pibpercapta2 = pib2 / populacao2;
 
-    printf("Cidade A1\n");
-    printf("Estado A1: %s\n", estadoA1);
-    printf("Nome da cidade A1: %s\n", nomedacidadeA1);
+    //Exibição dos dados da primeira carta
+    printf("Carta 1\n");
+    printf("Estado: %s\n", estado1);
+    printf("Código: %s%s \n", estado1, codigodacarta1);
+    printf("Nome da cidade: %s\n", nomedacidadeA1);
     printf("Populacao A1: %d\n", populacaoA1);
     printf("Area A1(km²): %.2f\n", areaA1);
     printf("PIB A1: %.2f\n", pibA1);
@@ -67,7 +74,8 @@ int main(){
     printf("PIB per Capita A1:%.2f\n", pibpercaptaA1);
 
     printf("Cidade A2\n");
-    printf("Estado A2: %s\n", estadoA2);
+    printf("Estado: %s\n", estado2);
+    printf("Código: %s%s \n", estado2, codigodacarta1);
     printf("Nome da cidade A2: %s\n", nomedacidadeA2);
     printf("Populacao A2: %d\n", populacaoA2);
     printf("Area A2(km²): %.2f\n", areaA2);
