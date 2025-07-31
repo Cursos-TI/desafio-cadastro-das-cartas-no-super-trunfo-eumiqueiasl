@@ -1,28 +1,33 @@
 #include <stdio.h>
 
 int main(){
+    //Jogo Cartas Super Trunfo
+
     //Carta 1
     char estado1[30];
     char codigodacarta1[10];
     char nomedacidade1[50];
-    int populacao1;
+    unsigned long int populacao1;
     float area1;
     float pib1;
     int Npontosturisticos1;
     float densidadepop1;
     float pibpercapta1; 
+    float superPoder1;
 
     //Carta 2
     char estado2[3];
     char codigodacarta2[10];
     char nomedacidade2[50];
-    int populacao2;
+    unsigned long int populacao2;
     float area2;
     float pib2;
     int Npontosturisticos2;
     float densidadepop2;
     float pibpercapta2;
+    float superPoder2;
 
+    //Imprimir primeira carta
     printf("Insira os dados da primeira carta \n");
     printf("Digite a letra do Estado (Entre A e H):\n");
     scanf("%s", estado1);
@@ -31,7 +36,7 @@ int main(){
     printf("Nome da cidade:\n");
     scanf("%s", nomedacidade1);
     printf("População:\n");
-    scanf("%d", &populacao1);
+    scanf("%lu", &populacao1);
     printf("Área(km²):\n");
     scanf("%f", &area1);
     printf("PIB:\n");
@@ -41,7 +46,14 @@ int main(){
 
     densidadepop1 = (float)populacao1 / area1;
     pibpercapta1 = (pib1 * 1000000000.0f) / populacao1;
-
+    superPoder1 = (float)populacao1 +
+                   area1 +
+                   (pib1 * 1000000000) +  // Convertendo PIB para reais
+                   (float)Npontosturisticos1 +
+                   pibpercapta1 +
+                   (1 / densidadepop1);
+  
+    //Imprimir segunda carta
     printf("Insira os dados da segunda carta\n");
     printf("Digite a letra do Estado (Entre A e H):\n");
     scanf("%s", estado2);
@@ -50,7 +62,7 @@ int main(){
     printf("Nome da cidade:\n");
     scanf("%s", nomedacidade2);
     printf("População:\n");
-    scanf("%d", &populacao2);
+    scanf("%lu", &populacao2);
     printf("Área(km²):\n");
     scanf("%f", &area2);
     printf("PIB:\n");
@@ -60,13 +72,19 @@ int main(){
 
     densidadepop2 = (float)populacao2 / area2;
     pibpercapta2 = (pib2 * 1000000000.0f) / populacao2;
+    superPoder2 = (float)populacao2 +
+                   area2 +
+                   (pib2 * 1000000000) +  // Convertendo PIB para reais
+                   (float)Npontosturisticos2 +
+                    pibpercapta2 +
+                   (1 / densidadepop2);
 
     //Exibição dos dados da primeira carta
     printf("Carta 1\n");
     printf("Estado: %s\n", estado1);
     printf("Código: %s%s \n", estado1, codigodacarta1);
     printf("Nome da cidade: %s\n", nomedacidade1);
-    printf("Populacao: %d\n", populacao1);
+    printf("Populacao: %lu\n", populacao1);
     printf("Area(km²): %.2f\n", area1);
     printf("PIB: %.2f\n", pib1);
     printf("Numero de pontos turisticos: %d\n", Npontosturisticos1);
@@ -76,9 +94,9 @@ int main(){
     //Exibição dos dados da segunda carta
     printf("Carta2\n");
     printf("Estado: %s\n", estado2);
-    printf("Código: %s%s \n", estado2, codigodacarta1);
+    printf("Código: %s%s \n", estado2, codigodacarta2);
     printf("Nome da cidade: %s\n", nomedacidade2);
-    printf("Populacao: %d\n", populacao2);
+    printf("Populacao: %lu\n", populacao2);
     printf("Area(km²): %.2f\n", area2);
     printf("PIB: %.2f\n", pib2);
     printf("Numero de pontos turisticos: %d\n", Npontosturisticos2);
