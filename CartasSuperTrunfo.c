@@ -90,6 +90,8 @@ int main(){
     printf("Numero de pontos turisticos: %d\n", Npontosturisticos1);
     printf("Densidade populacional(hab/km²):%.2f\n", densidadepop1);
     printf("PIB per Capita:%.2f\n", pibpercapta1);
+    printf("Super Poder: %.2f\n", superPoder1);
+
 
     //Exibição dos dados da segunda carta
     printf("Carta2\n");
@@ -102,7 +104,29 @@ int main(){
     printf("Numero de pontos turisticos: %d\n", Npontosturisticos2);
     printf("Densidade populacional(hab/km²):%.2f\n", densidadepop2);
     printf("PIB per Capita:%.2f\n", pibpercapta2);
+    printf("Super Poder: %.2f\n", superPoder2);
 
-    return 0;
+    // Comparações
+
+    int rPopulacao = populacao1 > populacao2;
+    int rArea = area1 > area2;
+    int rPib = pib1 > pib2;
+    int rPontosTuristicos = Npontosturisticos1 > Npontosturisticos2;
+    int rDensidade = densidadepop1 < densidadepop2; // menor vence
+    int rPibPerCapita = pibpercapta1 > pibpercapta2;
+    int rSuperPoder = superPoder1 > superPoder2;
+
+    printf("População: %d\n", rPopulacao);
+    printf("Área: %d\n", rArea);
+    printf("PIB: %d\n", rPib);
+    printf("Pontos Turísticos: %d\n", rPontosTuristicos);
+    printf("Densidade Populacional: %d\n", rDensidade);
+    printf("PIB per Capita: %d\n", rPibPerCapita);
+    printf("Super Poder: %d\n", rSuperPoder);
+
+    
+
+    
+        return 0;
 }
 
