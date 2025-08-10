@@ -4,7 +4,7 @@ int main(){
     //Jogo Cartas Super Trunfo
 
     //Carta 1
-    char estado1[30];
+    char estado1[3];
     char codigodacarta1[10];
     char nomedacidade1[50];
     unsigned long int populacao1;
@@ -30,7 +30,7 @@ int main(){
     //Imprimir primeira carta
     printf("Insira os dados da primeira carta \n");
     printf("Digite a letra do Estado (Entre A e H):\n");
-    scanf("%s", estado1);
+    scanf("%c", estado1);
     printf("Codigo da carta (dois digitos): \n");
     scanf("%s", codigodacarta1);
     printf("Nome da cidade:\n");
@@ -56,7 +56,7 @@ int main(){
     //Imprimir segunda carta
     printf("Insira os dados da segunda carta\n");
     printf("Digite a letra do Estado (Entre A e H):\n");
-    scanf("%s", estado2);
+    scanf("%c", estado2);
     printf("Codigo da carta (dois digitos): \n");
     scanf("%s", codigodacarta2);
     printf("Nome da cidade:\n");
@@ -81,8 +81,8 @@ int main(){
 
     //Exibição dos dados da primeira carta
     printf("Carta 1\n");
-    printf("Estado: %s\n", estado1);
-    printf("Código: %s%s \n", estado1, codigodacarta1);
+    printf("Estado: %c\n", estado1);
+    printf("Código: %c%s \n", estado1, codigodacarta1);
     printf("Nome da cidade: %s\n", nomedacidade1);
     printf("Populacao: %lu\n", populacao1);
     printf("Area(km²): %.2f\n", area1);
@@ -95,8 +95,8 @@ int main(){
 
     //Exibição dos dados da segunda carta
     printf("Carta2\n");
-    printf("Estado: %s\n", estado2);
-    printf("Código: %s%s \n", estado2, codigodacarta2);
+    printf("Estado: %c\n", estado2);
+    printf("Código: %c%s \n", estado2, codigodacarta2);
     printf("Nome da cidade: %s\n", nomedacidade2);
     printf("Populacao: %lu\n", populacao2);
     printf("Area(km²): %.2f\n", area2);
@@ -116,17 +116,27 @@ int main(){
     int rPibPerCapita = pibpercapta1 > pibpercapta2;
     int rSuperPoder = superPoder1 > superPoder2;
 
-    printf("População: %d\n", rPopulacao);
-    printf("Área: %d\n", rArea);
-    printf("PIB: %d\n", rPib);
-    printf("Pontos Turísticos: %d\n", rPontosTuristicos);
-    printf("Densidade Populacional: %d\n", rDensidade);
-    printf("PIB per Capita: %d\n", rPibPerCapita);
-    printf("Super Poder: %d\n", rSuperPoder);
+    // Exibir os resultados
+    printf("\n=== Resultados das Comparações ===\n");
+    printf("População: %d - Carta %d venceu\n", rPopulacao, rPopulacao ? 1 : 2);
+    printf("Área: %d - Carta %d venceu\n", rArea, rArea ? 1 : 2);
+    printf("PIB: %d - Carta %d venceu\n", rPib, rPib ? 1 : 2);
+    printf("Pontos Turísticos: %d - Carta %d venceu\n", rPontosTuristicos, rPontosTuristicos ? 1 : 2);
+    printf("Densidade Populacional: %d - Carta %d venceu\n", rDensidade, rDensidade ? 1 : 2);
+    printf("PIB per Capita: %d - Carta %d venceu\n", rPibPerCapita, rPibPerCapita ? 1 : 2);
+    printf("Super Poder: %d - Carta %d venceu\n", rSuperPoder, rSuperPoder ? 1 : 2);
 
-    
 
-    
-        return 0;
+    // Implementação Logicas de decisão comparando atributos
+
+printf("Comparação de cartas:\n");
+printf("População 1: %lu\n", populacao1);
+printf("População 2: %lu\n", populacao2);
+
+if (populacao1 > populacao2){
+    printf("Carta 1 venceu por ter a maior população \n");
+} else{ 
+    printf("Carta 2 venceu por ter a maior população \n");
+    }
+           
 }
-
