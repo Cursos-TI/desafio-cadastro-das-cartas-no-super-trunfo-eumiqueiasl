@@ -27,6 +27,9 @@ int main(){
     float pibpercapta2;
     float superPoder2;
 
+    //menu switch
+    int atributo;
+
     //Imprimir primeira carta
     printf("Insira os dados da primeira carta \n");
     printf("Digite a letra do Estado (Entre A e H):\n");
@@ -127,16 +130,75 @@ int main(){
     printf("Super Poder: %d - Carta %d venceu\n", rSuperPoder, rSuperPoder ? 1 : 2);
 
 
-    // Implementação Logicas de decisão comparando atributos
+    //Menu de opções
+    printf("Escolha seu atributo\n");
+    printf("1. População\n");
+    printf("2. Area\n");
+    printf("3. PIB\n");
+    printf("4. Densidade Populacional\n");
+    printf("5. PIB per capita\n");
+    scanf("%d", &atributo);
 
-printf("Comparação de cartas:\n");
-printf("População 1: %lu\n", populacao1);
-printf("População 2: %lu\n", populacao2);
+    // Implementação Logicas de decisão comparando atributos// adicionando switch
 
-if (populacao1 > populacao2){
-    printf("Carta 1 venceu por ter a maior população \n");
-} else{ 
-    printf("Carta 2 venceu por ter a maior população \n");
-    }
-           
+    switch (atributo)
+    {
+    case 1:
+        if(populacao1 > populacao2){
+            printf("Carta 1 venceu por ter a maior população \n");
+        }else if(populacao1 < populacao2){
+            printf("Carta 2 venceu por ter a maior população \n");
+        }else{
+            printf("Empate");
+        }
+        break;
+
+    case 2:
+        if(area1 > area2){
+            printf("Carta 1 venceu por ter a maior area \n");
+        }else if(area1 < area2){
+            printf("Carta 2 venceu por ter a maior area \n");
+        }else{
+            printf("Empate");
+        }
+        break;
+    
+    case 3:
+        if(pib1 > pib2){
+            printf("Carta 1 venceu por ter a maior PIB \n");
+        }else if(pib1 < pib2){
+            printf("Carta 2 venceu por ter a maior PIB \n");
+        }else{
+            printf("Empate");
+        }
+        break;
+
+    case 4:
+        if(densidadepop1 > densidadepop2){
+            printf("Carta 1 venceu por ter a maior densidade populacional \n");
+        }else if(densidadepop1 < densidadepop2){
+            printf("Carta 2 venceu por ter a maior densidade populacional \n");
+        }else{
+            printf("Empate");
+        }
+        break;    
+
+    case 5:
+        if(pibpercapta1 > pibpercapta2){
+            printf("Carta 1 venceu por ter a maior PIB per capita \n");
+        }else if(populacao1 < populacao2){
+            printf("Carta 2 venceu por ter a maior PIB per capita \n");
+        }else{
+            printf("Empate");
+        }
+        break;
+
+        default:
+            printf("Opção invalida");
+        break;
+
+}
+
+return 0;
+
 }
